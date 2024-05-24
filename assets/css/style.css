@@ -1,0 +1,568 @@
+*{
+  background-color: rgba(38, 131, 252, 1);; /*makes the  background this bleuish color, the background color account, favorite, winkelwagen. */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: black; /*makes the navbar words black */
+}
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.grid{ /*mobile format*/
+  display: grid;
+  grid-template-columns: auto; /*5 times 1fr means there are 5 colums, for example "title title title title title"*/
+  grid-template-rows: auto; /*5 times rows, so title is 1, header is 2, sidebar and content are 7. footer makes 8 rows */
+  grid-template-areas: 
+  "title title title title title"
+  "header header header header header"
+  "sidebar content content content content"
+  "sidebar content content content content"
+  "sidebar content content content content"
+  "sidebar content content content content"
+  "sidebar content content content content"
+  "footer footer footer footer footer";
+  grid-gap: 10px; /*makes white gaps between the grids*/
+
+  background-color: red;
+}
+
+/* .title{
+  grid-column-start: 1; /* so this column start at 1*/
+  /* grid-column-end: 5; so this column ends at 5 */
+  /* this is the same as grid-column: 1/5 
+}*/
+
+.title{
+  grid-area: title;
+}
+
+.header{
+  grid-area: header;
+}
+
+.sidebar{
+  grid-area: sidebar;
+}
+
+.content{
+  grid-area: content;
+}
+
+.content{
+  grid-area: content;
+}
+
+.content{
+  grid-area: content;
+}
+
+.footer{
+  grid-area: footer;
+}
+
+
+
+/* Searchbar */
+.title-and-search {
+  grid-area: title;
+  display: flex; /* This will align the title and search bar side by side */
+  justify-content: space-between; /* This will place the title on one end and the search bar on the other */
+  align-items: center; /* This will vertically center them */
+  padding: 0 20px; /* Adjust padding as needed */
+}
+/* Techmarkt title */
+.title h1{
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 250%;
+  margin-left: 60px;
+  color: white;
+}
+
+
+.menu-icon{
+  background-color:rgba(38, 131, 252, 1);
+  margin-right: -60px;
+/*backgroundcolor of the menu icon and the margin-right, makes it closer to categorieën */
+
+}
+
+.dropbtn{
+  background-color: rgba(38, 131, 252, 1);/*makes the background dropdown bleuish */
+  color: black;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  font-weight: bolder;
+  
+ 
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+#dropdown{
+  height: 50px;
+  background-color:#FFFFFF;
+  font-weight: 900;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Lexend', sans-serif;
+  /* Makes the content, so the words, Laptop, Mobiel, Tc, Tablets black and etc. */
+}
+
+.dropdown-content a:hover {background-color:rgba(166, 194, 218, 0.07);} /*Makes the dropdown hover black */
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgba(166, 194, 218, 0.07);} /* Makes the dropdown button this colour whitisch */
+
+.search-bar {
+  width: max-content;
+  display: flex;
+  align-items:center;
+  padding: 14px;
+  border-radius: 10px;
+  transition: box-shadow 0.25s;
+  background-color: white;
+}
+
+#search-bar{
+  background-color: #f6f6f6;
+}
+
+.search-icon{
+  background:#f6f6f6;
+}
+
+
+.search-bar:focus-within{
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+
+.search-bar input[type="search"] {
+  font-size: 20px; /*This is the size of the searchbar*/
+  font-family: 'Lexend', sans-serif;
+  color: #333333;
+  margin-left: 14px;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 500px; /*This is the length of the searchbar*/
+  flex: 1;
+  background-color: #f6f6f6;
+
+}
+
+.search-bar input::placeholder,
+.search-icon /*makes the placeholder and search icon this colour*/{
+  color: rgba(0,0,0,0.25);
+}
+
+
+.search-bar button {
+  outline: none;
+  border: none;
+  background-color: #f6f6f6; /*Makes the little box under the search icon white. */
+  
+}
+/* till here for the searchbar */
+.navbar-container{
+  font-size: 15px;/* the size off account, favorite and winkelwagen */
+  font-family: 'Lexend', sans-serif;
+  display: flex;
+
+
+}
+
+#navbar-links{
+  display: flex; /*makes account, favorite and winkelwagen next to eachother*/
+  list-style: none; /*removes bullet points*/ 
+ 
+}
+
+#navbar-links li{
+  margin-left: 0px; /* Adds space between the links account, favorite and winkelwagen*/
+  margin-inline-start: 40px;
+  
+}
+
+
+a{
+  text-decoration: none; /*Makes the text underline for the navbar none*/
+
+}
+
+
+.account-icon{
+  margin-right: -30px;
+   /*This makes the background of the icon this blueish color and the icon this black color */
+  background-color:rgba(38, 131, 252, 1) ;
+  color: black;
+}
+
+.favorite-icon{
+  margin-right: -40px;
+   /*This makes the background of the icon this blueish color and the icon this black color */
+  background-color:rgba(38, 131, 252, 1) ;
+  color: black;
+}
+
+.cart-icon{
+  margin-right: -40px;
+  /*This makes the background of the icon this blueish color and the icon this black color */
+  background-color:rgba(red) ;
+  color: black;
+}
+
+
+
+img{
+  background-color: white;
+  height: auto;
+  max-width: 100%;
+  padding: 30px;
+  /* float: right; */
+}
+
+
+
+
+@media screen and (min-width: 736px)
+{
+
+
+.nav-container{
+  background: black;
+  display: grid;
+  align-items: center; /*Makes it go in the center and vertical*/
+
+}
+
+.nav-links li{
+  display: inline-block; /*makes it next to each other*/
+  margin: 0 10px; /*makes the gape between the woords*/
+  font-weight: 900;/*gives the thicknes of the words*/
+  font-size: 15.7px;/*size of the words*/
+}
+
+.nav-container1 {
+  display: flex; /* This makes it a flex container */
+  justify-content: flex-end; /* This aligns children to the right */
+  background: black; /* Your existing style */
+  padding-right: 20px; /* Add some padding on the right if needed */
+}
+
+
+.nav-links1{ 
+  margin-top: -1.2%;/*this makes the words go up or down in percentage*/
+  display: inline-block;/*makes the words go to right of the page*/
+  justify-content: flex-end;/*makes the words go to right of the page*/
+  list-style: none;
+  
+}
+
+.nav-links1 li{
+  display: inline-block;
+  margin: 0 20 px;
+  /*makes the words next to eachother*/
+}
+}
+
+
+
+
+
+#photodeal{
+  display: flex; /* Makes the photos next to each other*/
+  align-items: center;/*make the photos in the center*/
+  justify-content: space-around;
+  
+  
+}
+.photodeal img{
+  width: auto;
+  height: 400px;
+
+}
+
+/*Slider in the sidebar */
+
+.sidebar{
+  background-color: white;
+  height: 70%;
+}
+
+
+
+
+/* Price Range Slider Styles */
+.price-range-slider {
+  margin: 20px;
+  padding: 10px;
+ 
+}
+
+.price-range-slider label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff; /* Adjust based on your sidebar's color scheme */
+}
+
+.slider {
+  -webkit-appearance:none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.color-products{
+  border: 15px solid white;
+}
+.merk-products{
+  border: 15px solid white;
+}
+.besturingssysteem{
+  border: 15px solid white;
+}
+
+.beschikbaarheid{
+  border: 15px solid white;
+}
+.introductiejaar{
+  border: 15px solid white;
+}
+
+#buttons{
+  background-color: white;
+  border: 15px solid white;
+}
+.btn{
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: pink;
+}
+.column {
+  /* background-color: red; */
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px; /* Optional: Adds some space between the columns */
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: none;
+ 
+}
+
+.products{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  justify-content: space-between;
+  background-color:pink;
+}
+
+  
+.container-1 column {
+  display: flex;/*Boxes are placed side by side horizontal. This is a default(standard) row for flexbox */
+  flex-direction: row;/*this is a property, the default row means the columns will be side by side from left to right from a horizontal direction.
+  if you want it vertically this is column. */
+}
+
+
+.container-2 column {
+  display: flex;/*Boxes are placed side by side horizontal. This is a default(standard) row for flexbox
+  /*flex-direction: row;/*this is a property, the default row means the columns will be side by side from left to right from a horizontal direction.
+  if you want it vertically this is column. */
+}
+
+.container-3 column {
+  display: flex;/*Boxes are placed side by side horizontal. This is a default(standard) row for flexbox */
+  flex-direction: row;/*this is a property, the default row means the columns will be side by side from left to right from a horizontal direction.
+  if you want it vertically this is column. */
+}
+
+.container-4 column {
+  display: flex;/*Boxes are placed side by side horizontal. This is a default(standard) row for flexbox */
+  flex-direction: row;/*this is a property, the default row means the columns will be side by side from left to right from a horizontal direction.
+  if you want it vertically this is column. */
+}
+
+.container-5 column {
+  display: flex;/*Boxes are placed side by side horizontal. This is a default(standard) row for flexbox */
+  flex-direction: row;/*this is a property, the default row means the columns will be side by side from left to right from a horizontal direction.
+  if you want it vertically this is column. */
+}
+.container-6 column {
+  display: flex;/*Boxes are placed side by side horizontal. This is a default(standard) row for flexbox */
+  flex-direction: row;/*this is a property, the default row means the columns will be side by side from left to right from a horizontal direction.
+  if you want it vertically this is column. */
+}
+.container-7 column {
+  display: flex;/*Boxes are placed side by side horizontal. This is a default(standard) row for flexbox */
+  flex-direction: row;/*this is a property, the default row means the columns will be side by side from left to right from a horizontal direction.
+  if you want it vertically this is column. */
+}
+.container-8 column {
+  display: flex;/*Boxes are placed side by side horizontal. This is a default(standard) row for flexbox */
+  flex-direction: row;/*this is a property, the default row means the columns will be side by side from left to right from a horizontal direction.
+  if you want it vertically this is column. */
+}
+/* .container-1 img{
+  min-width: 10%;
+  min-height: 10%;
+}
+.container-2 img{
+  min-width: 10%;
+  min-height: 10%;
+} */
+/* img src{
+  min-height: 10px;
+  min-width: 10px;
+} */
+
+/* .container-3 img{
+  min-width: 10%;
+  min-height: 10%;
+}
+.container-4 img{
+  min-width: 10%;
+  min-height: 10%;
+}
+.container-5 img{
+  min-width: 10%;
+  min-height: 10%;
+}
+.container-6 img{
+  min-width: 10%;
+  min-height: 10%;
+}
+.container-7 img{
+  min-width: 10%;
+  min-height: 10%;
+}
+.container-8 img{
+  min-width: 10%;
+  min-height: 10%;
+}
+ */
+
+
+
+
+
+.wwagen{
+  background-color: red;
+  border: 3px solid black;
+  padding: 10px;
+  width: 260px;
+  text-indent:-70px;
+  cursor: pointer;
+
+}
+.wwagen:hover{
+  background-color: pink;
+  
+}
+h6{
+  background-color:#4CAF50;
+  text-align: center;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 1000;
+  font-size: large;
+  padding-left: 45px;
+  padding-right: 45px;
+
+}
+h6:hover{
+  background-color: pink;
+  
+}
+.product{
+  background-color: violet;
+ 
+}
+
+
+/* Style for social media icons list */
+.social-media-icons ul {
+  list-style-type: none; /* Remove default list style */
+  /* padding: 300px; Remove default padding */
+ padding-bottom: 0px;
+ padding-top: 450px;
+ text-align: center;
+}
+
+/* Style for social media icons list items */
+.social-media-icons li {
+  display: inline-block; /* Display social media icons inline */
+  margin: 0 10px; /* Add margin between social media icons */
+}
+
+.small-container cart-page{
+  font:purple;
+}

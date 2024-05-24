@@ -1,0 +1,45 @@
+* {
+  background-color: white;
+}
+.text h2{
+  display:block;
+  margin-top: 10%;
+  text-indent: 20%;
+}
+
+.text p{
+  display:block;
+  text-indent: 20%;
+}
+/* product0 class for the main image */
+.product0 img {
+  display: block;
+  margin-top: 10px; /* Adjust as needed */
+  margin-left: 150px; /* Center the image horizontally */
+  margin-right: auto; /* Center the image horizontally */
+  margin-bottom: 20px;
+  max-width: 100%; /* Ensure image responsiveness */
+}
+
+/* product0voorkant class for the front view image */
+.product0voorkant img {
+  float: left; /* Float the image to the left */
+  margin-left: 150px;
+  margin-left: none;
+  max-width: 125px; /* Adjust as needed */
+}
+
+/* product0achterkant class for the back view image */
+.product0achterkant img {
+  float: left; /* Float the image to the left */
+  margin-left: 12px;
+  max-width: 125px; /* Adjust as needed */
+}
+
+/* product0zijkant class for the side view image */
+.product0zijkant img {
+  float: left; /* Float the image to the left */
+  margin-left: 12px;
+  width: 100px;
+  max-width: 106px;
+}

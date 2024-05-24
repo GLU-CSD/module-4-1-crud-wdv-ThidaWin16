@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Bestelformulier</h1>
+
+    <div id="containerform">
+    <form action="contactform.php" method="get">
+        <fieldset>
+            <legend>Persoonlijke gegevens</legend>
+            <label for="aanhef">Aanhef:</label>
+             Dhr.: <input type="radio" name="gender" value="Dhr.">
+             Mevr.: <input type="radio" name="gender" value="Mevr."><br><br>
+            <label for="voornaam">Voornaam:</label>
+            <input type="text" id="voornaam" name="voornaam" placeholder="Type je voornaam" required><br><br>
+            <label for="tussenvoegsel">Tussenvoegsel:</label>
+            <input type="text" id="tussenvoegsel" name="tussenvoegsel" placeholder="Type je tussenvoegsel"><br><br>
+            <label for="achternaam">Achternaam:</label>
+            <input type="text" id="achternaam" name="achternaam" placeholder="Type je achternaam" required><br><br>
+            <label for="straatnaam">Straatnaam:</label>
+            <input type="text" id="straatnaam" name="straatnaam" placeholder="Type je straatnaam" required>
+            <label for="huisnummer">Huisnummer:</label>
+            <input type="number" id="huisnummer" name="huisnummer" min="1" max="100000" placeholder="Type je huisnummer" required>
+            <label for="toevoeging">Toevoeging</label>
+            <input type="text" id="toevoeging" name="toevoeging" placeholder="Type je toevoeging"><br><br>
+            <label for="postcode">Postcode:</label>
+            <input type="text" pattern="[0-9]{4}[A-Za-z]{2}" id="postcode" name="postcode" placeholder="bijvoorbeeld 1234AB" required><br><br>
+            <!-- <input type="text" id="postcode" name="postcode" placeholder="Type je postcode" required><br><br> -->
+            <label for="land">Land:</label>
+            <select name="land">
+            <option value="land1">België</option>
+            <option value="land2">Duitsland</option>
+            <option value="land3">Frankrijk</option>
+            <option value="land4">Italië</option>
+            <option value="land5">Nederland</option>
+            <option value="land6">Spanje</option>
+            <option value="land7">United Kingdom</option>
+            </select><br><br>
+            <label for="geboortedatum">Geboortedatum:</label>
+            <input type="date" id="geboortedatum" name="geboortedatum" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Type je e-mailadres" required><br><br>
+            
+            <label for="telefoonnummer">Telefoonnummer:</label>
+            <select id="country" onchange="country_code()"> 
+                <option value="select country">Select country</option>
+                <option value="BE">België</option>
+                <option value="DE">Duitsland</option>
+                <option value="FR">Frankrijk</option>
+                <option value="IT">Italië</option>
+                <option value="NL">Nederland</option>
+                <option value="ES">Spanje</option>
+                <option value="UK">United Kingdom</option>
+            </select>
+            <!-- Add an image tag where the flag will be displayed -->
+            <img id="flagImage" src="" alt="Country flag">
+            <input type="tel" id="telefoonnummer" name="telefoonnummer" placeholder="Type je telefoonnummer" required><br><br>
+
+            <!-- Existing fields continue -->
+
+ 
+<script>
+    function country_code(){
+        var value = document.getElementById("country").value;
+        var phoneInput = document.getElementById("telefoonnummer");
+        var flagImage = document.getElementById("flagImage"); // Get the flag image element
+
+        // Define a base path for flag images if they are stored in a specific directory
+        var basePath = "assets/img/";
+
+        // Reset phone input and flag image if no country is selected
+        if (value === "select country"){
+            phoneInput.value = "";
+            flagImage.src = "";
+            flagImage.alt = "Country flag";
+            return; // Exit the function
+        }
+
+        // Update the input value and flag image source based on the selected country
+        switch (value) {
+            case "BE":
+                phoneInput.value = "+32";
+                flagImage.src = basePath + "vlagbelgie.jpg";
+                break;
+            case "DE":
+                phoneInput.value = "+49";
+                flagImage.src = basePath + "vlagduits.jpg";
+                break;
+            case "FR":
+                phoneInput.value = "+33";
+                flagImage.src = basePath + "vlagfrank.jpg";
+                break;
+            case "IT":
+                phoneInput.value = "+39";
+                flagImage.src = basePath + "vlagitalie.jpg";
+                break;
+            case "NL":
+                phoneInput.value = "+31";
+                flagImage.src = basePath + "vlagnl.jpg";
+                break;
+            case "ES":
+                phoneInput.value = "+34";
+                flagImage.src = basePath + "vlagspanje.jpg";
+                break;
+            case "UK":
+                phoneInput.value = "+44";
+                flagImage.src = basePath + "vlaguk.jpg";
+                break;
+        }
+
+        // Update alt text for accessibility
+        flagImage.alt = "Flag of " + document.querySelector("#country option:checked").text;
+    }
+
+//     function disableSubmit() {
+//   document.getElementById("submit").disabled = true;
+//  }
+
+//   function activateButton(element) {
+    
+//       if(element.checked) {
+//         document.getElementById("submit").disabled = false;
+//        }
+//        else  {
+//         document.getElementById("submit").disabled = true;
+//       }
+  
+//   }
+  
+
+
+</script>
+
+<!-- <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  Ik heb de algemene voorwaarden gelezen en ga ermee akkoord -->
+
+<input type="checkbox" id="voorwaarden" name="voorwaarden" required>
+<label for="voorwaarden">Ik heb de algemene voorwaarden gelezen en ga ermee akkoord</label><br><br>
+<input type="submit" value="Verzenden">
+</fieldset>
+</form>
+</div>
+
+
+</body>
+</html>

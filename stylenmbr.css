@@ -1,0 +1,17 @@
+html, body {
+  background-color:rgba(21, 114, 201, 0.34);
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+/*for the form.html flag images*/
+#flagImage {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+
+}
