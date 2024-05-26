@@ -11,3 +11,7 @@ Step1:
 Clone the git weekopdrachten-webshop-dynamisch-ThidaWin16
 
 Step2:
+Download de databse producten.sql
+
+step3:
+Open it
