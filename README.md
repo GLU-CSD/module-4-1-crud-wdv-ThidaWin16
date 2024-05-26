@@ -3,7 +3,7 @@
 
 Techmarkt technology website
 
-This website is made for a school assignment. The front end of the website is displayed by using database.
+This website is made for a school assignment. The front end of the website is displayed by using database.(If you click on this link, You will see the website online without the database: https://u230380.gluwebsite.nl/web/weekopdrachten-webshop-dynamisch-ThidaWin16/ )
 
 Instructions how to install the website.
 
@@ -11,7 +11,7 @@ Step1:
 Clone the git weekopdrachten-webshop-dynamisch-ThidaWin16
 
 Step2:
-Download de databse producten.sql
+Download de databse: producten.sql
 
 step3:
 Open it
